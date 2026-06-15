@@ -1,3 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import 'tailwindcss';
+ @plugin "daisyui" {
+   themes: night;
+ }
+
+.font-montserrat {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+
+  /* 1. Definimos los movimientos premium */
+  @keyframes fadeIn {
+    0%{
+      opacity:0;
+    }
+    100%{
+      opacity:1;
+    }
+  }
+  /* 2. Creamos la utilidad personalizada */
+.animate-fadeIn{
+  animation: fadeIn .3s ease-in-out
+}
+

@@ -1,0 +1,30 @@
+<div class="swiper items-center justify-center" #swiperDiv>
+  <!-- Additional required wrapper -->
+  <div class="swiper-wrapper">
+    <!-- Slides -->
+    @for (image of images(); track $index)
+    {
+    <div class="swiper-slide">
+      <figure>
+        <img [src]="image | productImagePipe" class="w-full h-full rounded over animate-fadeIn" />
+      </figure>
+    </div>
+    }
+    @empty {
+    <div class="swiper-slide">
+      <figure>
+        <img [src]="null | productImagePipe" class="w-full h-full rounded over animate-fadeIn" />
+      </figure>
+    </div>
+    }
+  </div>
+  <!-- If we need pagination -->
+  <div class="swiper-pagination"></div>
+
+  <!-- If we need navigation buttons -->
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+
+  <!-- If we need scrollbar -->
+  <div class="swiper-scrollbar"></div>
+</div>
