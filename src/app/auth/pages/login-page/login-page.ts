@@ -2,10 +2,11 @@ import { AuthService } from '@/auth/services/auth.service';
 import { Component, inject, signal } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router, RouterLink } from "@angular/router";
+import { CornerCard } from "@/store-front/components/corner-card/corner-card";
 
 @Component({
   selector: 'app-login-page',
-  imports: [RouterLink, ReactiveFormsModule],
+  imports: [RouterLink, ReactiveFormsModule, CornerCard],
   templateUrl: './login-page.html',
 })
 export class LoginPage {
